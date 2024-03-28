@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam animi voluptate neque nam excepturi, modi voluptatibus tenetur. Doloremque ab explicabo laboriosam sint, voluptatum minus perspiciatis praesentium ratione dolores eos nihil cumque consequuntur, unde at reprehenderit deleniti consequatur numquam voluptates quod illum harum pariatur quos nostrum? Aliquam quibusdam minima tenetur, ratione possimus nam, eaque cupiditate dolor illum a commodi corrupti? Nostrum optio facilis laboriosam architecto quasi tenetur provident labore blanditiis delectus.</p>
+  <button onclick="convertToUpperCase()">UpperCase</button>
+  <button onclick="convertToLowerCase()">LowerCase</button>
+  <button onclick="searchText()">Search</button>
+  <button onclick="calculateLength()">Length</button>
+
+  <script>
+    function convertToUpperCase() {
+      let text = document.querySelector('p').textContent;
+      console.log(text.toUpperCase());
+    }
+
+    function convertToLowerCase() {
+      let text = document.querySelector('p').textContent;
+      console.log(text.toLowerCase());
+    }
+
+    function searchText() {
+      let text = document.querySelector('p').textContent;
+      let searchTerm = prompt("Enter the text to search for:");
+      if (text.includes(searchTerm)) {
+        console.log("Text found!");
+      } else {
+        console.log("Text not found!");
+      }
+    }
+
+    function calculateLength() {
+      let text = document.querySelector('p').textContent;
+      console.log("Length of text: " + text.length);
+    }
+  </script>
+</body>
+</html>
